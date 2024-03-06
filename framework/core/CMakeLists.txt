@@ -3,12 +3,14 @@
 cmake_minimum_required(VERSION 3.15)
 project(kungfu)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 ##########################################################################
 
 include(.cmake/editor.cmake)
 include(.cmake/compiler.cmake)
 include(.cmake/libnode.cmake)
-include(build/conanbuildinfo.cmake)
+include(${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup(KEEP_RPATHS NO_OUTPUT_DIRS SKIP_STD SKIP_FPIC)
 
 ##########################################################################

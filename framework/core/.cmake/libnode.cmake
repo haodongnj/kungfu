@@ -7,8 +7,8 @@ macro(use_node_addon_api)
           WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
           OUTPUT_VARIABLE NODE_ADDON_API_DIR
   )
-  string(REPLACE "\n" "" NODE_ADDON_API_DIR ${NODE_ADDON_API_DIR})
-  string(REPLACE "\"" "" NODE_ADDON_API_DIR ${NODE_ADDON_API_DIR})
+  string(REPLACE "\n" "" NODE_ADDON_API_DIR "${NODE_ADDON_API_DIR}")
+  string(REPLACE "\"" "" NODE_ADDON_API_DIR "${NODE_ADDON_API_DIR}")
 
   message(STATUS "Include node-addon-api headers from [${NODE_ADDON_API_DIR}]")
   message(STATUS "Include node-js headers from [${CMAKE_JS_INC}]")
@@ -27,8 +27,8 @@ macro(use_libnode)
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     OUTPUT_VARIABLE LIBNODE_INCLUDE_DIR
   )
-  string(REPLACE "\n" "" LIBNODE_INCLUDE_DIR ${LIBNODE_INCLUDE_DIR})
-  string(REPLACE "\"" "" LIBNODE_INCLUDE_DIR ${LIBNODE_INCLUDE_DIR})
+  string(REPLACE "\n" "" LIBNODE_INCLUDE_DIR "${LIBNODE_INCLUDE_DIR}")
+  string(REPLACE "\"" "" LIBNODE_INCLUDE_DIR "${LIBNODE_INCLUDE_DIR}")
 
   execute_process(
     COMMAND
@@ -36,8 +36,8 @@ macro(use_libnode)
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     OUTPUT_VARIABLE LIBNODE_LIB_DIR
   )
-  string(REPLACE "\n" "" LIBNODE_LIB_DIR ${LIBNODE_LIB_DIR})
-  string(REPLACE "\"" "" LIBNODE_LIB_DIR ${LIBNODE_LIB_DIR})
+  string(REPLACE "\n" "" LIBNODE_LIB_DIR "${LIBNODE_LIB_DIR}")
+  string(REPLACE "\"" "" LIBNODE_LIB_DIR "${LIBNODE_LIB_DIR}")
 
   message(STATUS "Include libnode headers from ${LIBNODE_INCLUDE_DIR}")
 
