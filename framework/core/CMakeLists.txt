@@ -8,7 +8,7 @@ project(kungfu)
 include(.cmake/editor.cmake)
 include(.cmake/compiler.cmake)
 include(.cmake/libnode.cmake)
-include(build/conanbuildinfo.cmake)
+include(${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup(KEEP_RPATHS NO_OUTPUT_DIRS SKIP_STD SKIP_FPIC)
 
 ##########################################################################
